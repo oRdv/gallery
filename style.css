@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 150px 1fr 150px;
+    margin: 0px 400px 0px 400px;
+    height: 150px;
+    background-color: #f0fcff;
+
+}
+
+main{
+    display: grid;
+    grid-template-rows: 4fr 2fr;
+    row-gap: 15px;
+}
+
+.image1{
+    display: grid;
+    grid-area: navigation;
+    gap: 15px;
+    grid-template-columns: 7fr 6fr;
+
+
+}
