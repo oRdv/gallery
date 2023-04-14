@@ -3,114 +3,105 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background-color: #f0fcff;
-
 }
-html{
-    font-size: 16px;
+a{
+        text-decoration: none;
 }
-
-
+ul, ol, li {
+    list-style: none;
+}
 body{
+    background-color: rgb(175, 212, 255);
+    height: 100vh;
+    width: 100vw;
     display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    padding-left: 96px;
+    padding-right: 96px;
 }
-
-
 header{
-    display: flex;
+     display: flex;
     gap: 3px;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
 }
-
+p{
+    text-align: center;
+    padding-top: 15px;
+}
 .gal{
-    color: #bebeed;
+    color: #36b5d4;
+}
+.galeria{
+    height: 100%;
+    width: 100%;
+    display: grid;  
+    grid-template-areas:  
+       "f1 f1 f1 f1 f1 f2 f2 f2 f3 f3 f3"
+       "f1 f1 f1 f1 f1 f4 f4 f4 f5 f5 f5"
+       "f6 f6 f6 f7 f7 f7 f8 f8 f8 f8 f8";
+    gap: 12px;
+}
+.foto{
+    position: relative;
+    background-color:pink;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.foto:nth-child(1){
+    grid-area: f1;
+    background-image: url(./img/img1.jpg);
+}
+.foto:nth-child(2){
+    grid-area: f2;
+    background-image: url(./img/img2.jfif);
+}
+.foto:nth-child(3){
+    grid-area: f3;
+    background-image: url(./img/img3.jpg);
+}
+.foto:nth-child(4){
+    grid-area: f4;
+    background-image: url(./img/img4.jpg);
+}
+.foto:nth-child(5){
+    grid-area: f5;
+    background-image: url(./img/img5.jpg);
+}
+.foto:nth-child(6){
+    grid-area: f6;
+    background-image: url(./img/img6.jpg);
+}
+.foto:nth-child(7){
+    grid-area: f7;
+    background-image: url(./img/img7.jpg);
+}
+.foto:nth-child(8){
+    grid-area: f8;
+    background-image: url(./img/img8.jpg);
 }
 
-main{
-    gap: 20px;
-}
+.foto__info{
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.26);
+    color: white;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: .3s;
+    text-align: center;
+    padding-top: 20px ;
 
-main .top{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 0;
-
 }
-
-.quatro{
-    grid-area: side;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 450px;
-    height: 450px;
-    justify-content: center;
-    align-items: center;
+.foto:hover > .foto__info{
+    transform: translateY(0%); 
 }
-
-.big img{
-    width: 264x;
-    height: 489px;
-    transition-property: all;
-    transition-duration: 0.3ms;
-    transition-timing-function: ease;
-    transition-delay: 0.1;
-}
-
-.big img:hover{
-    background-color: black;
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-}
-
-.quatro img{
-    width: 200px;
-    height: 200px;
-    transition-property: all;
-    transition-duration: 0.2;
-    transition-timing-function: ease;
-    transition-delay: 0.1;
-}
-
-.quatro img:hover{
-    background-color: black;
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-}
-.bottom{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.bottom img{
-    width: 200px;
-    height: 180px;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0.1s;
-}
-
-.bottom img:hover{
-    background-color: black;
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
-}
-
-.bottom img{
-    height: 10.3vw;
-}
-
 footer{
     display: flex;
     justify-content: center;
@@ -118,7 +109,7 @@ footer{
 .button{
     font-family: 'Poppins', sans-serif;
     display: flex;
-    font-size: 1vw;
+    font-size: 15px;
     color: white;
     background-color: #2b83ef;
     padding: 10px;
@@ -131,17 +122,11 @@ footer{
     height: 3vw;
 }
 
-.button img:hover{
-    transform: scale(1.3);
-    transition: 0.5ms;
-    transition-delay: 1.3;
-}
-
 .linha{
-    height: 3px;
-    width: 30px;
+    height: 1px;
+    width: 90px;
     background-color: black;
     border-radius: 5px;
     position: absolute;
-    top: 60px;
+    top: 76px;
 }
